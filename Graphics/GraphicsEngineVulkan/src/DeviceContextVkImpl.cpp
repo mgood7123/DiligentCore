@@ -2009,7 +2009,8 @@ void DeviceContextVkImpl::CopyTexture(const CopyTextureAttribs& CopyAttribs)
     else if (SrcTexDesc.Usage == USAGE_STAGING && DstTexDesc.Usage != USAGE_STAGING)
     {
         DEV_CHECK_ERR((SrcTexDesc.CPUAccessFlags & CPU_ACCESS_WRITE), "Attempting to copy from staging texture that was not created with CPU_ACCESS_WRITE flag");
-        DEV_CHECK_ERR(pSrcTexVk->GetState() == RESOURCE_STATE_COPY_SOURCE, "Source staging texture must permanently be in RESOURCE_STATE_COPY_SOURCE state");
+        DEV_CHECK_ERR(!pSrcTexVk->IsInKnownState() || pSrcTexVk->GetState() == RESOURCE_STATE_COPY_SOURCE,
+                      "Source staging texture must permanently be in RESOURCE_STATE_COPY_SOURCE state");
 
         // address of (x,y,z) = region->bufferOffset + (((z * imageHeight) + y) * rowLength + x) * texelBlockSize; (18.4.1)
 
@@ -2635,9 +2636,12 @@ void DeviceContextVkImpl::TransitionTextureState(TextureVkImpl&           Textur
         }
     }
 
+    DEV_CHECK_ERR(TextureVk.GetDesc().Usage != USAGE_STAGING, "Texture state transition is not supported for staging texture");
+
     EnsureVkCmdBuffer();
 
     auto vkImg = TextureVk.GetVkImage();
+    VERIFY_EXPR(vkImg != VK_NULL_HANDLE);
 
     VkImageSubresourceRange FullSubresRange;
     if (pSubresRange == nullptr)
