@@ -29,6 +29,7 @@
 
 #include <memory>
 #include "VulkanPhysicalDevice.hpp"
+#include "DebugUtilities.hpp"
 
 namespace VulkanUtilities
 {
@@ -220,6 +221,17 @@ public:
     {
         return vkGetQueryPoolResults(m_VkDevice, queryPool, firstQuery, queryCount,
                                      dataSize, pData, stride, flags);
+    }
+
+    void ResetQueryPool(VkQueryPool queryPool,
+                        uint32_t    firstQuery,
+                        uint32_t    queryCount) const
+    {
+#if DILIGENT_USE_VOLK
+        vkResetQueryPoolEXT(m_VkDevice, queryPool, firstQuery, queryCount);
+#else
+        UNSUPPORTED("Host query reset is not supported when vulkan library is linked statically");
+#endif
     }
 
     void GetAccelerationStructureBuildSizes(const VkAccelerationStructureBuildGeometryInfoKHR& BuildInfo, const uint32_t* pMaxPrimitiveCounts, VkAccelerationStructureBuildSizesInfoKHR& SizeInfo) const;

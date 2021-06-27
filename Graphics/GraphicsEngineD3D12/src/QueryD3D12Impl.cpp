@@ -43,37 +43,76 @@ QueryD3D12Impl::QueryD3D12Impl(IReferenceCounters*    pRefCounters,
                                const QueryDesc&       Desc) :
     TQueryBase{pRefCounters, pDevice, Desc}
 {
-    auto& QueryMgr = pDevice->GetQueryManager();
-    for (Uint32 i = 0; i < (m_Desc.Type == QUERY_TYPE_DURATION ? Uint32{2} : Uint32{1}); ++i)
-    {
-        m_QueryHeapIndex[i] = QueryMgr.AllocateQuery(m_Desc.Type);
-        if (m_QueryHeapIndex[i] == QueryManagerD3D12::InvalidIndex)
-        {
-            for (Uint32 j = 0; j < i; ++j)
-            {
-                QueryMgr.ReleaseQuery(m_Desc.Type, m_QueryHeapIndex[j]);
-            }
-            LOG_ERROR_AND_THROW("Failed to allocate D3D12 query for type ", GetQueryTypeString(m_Desc.Type),
-                                ". Increase the query pool size in EngineD3D12CreateInfo.");
-        }
-    }
 }
 
 QueryD3D12Impl::~QueryD3D12Impl()
 {
-    auto& QueryMgr = m_pDevice->GetQueryManager();
-    for (auto HeapIdx : m_QueryHeapIndex)
+    DiscardQueries();
+}
+
+void QueryD3D12Impl::DiscardQueries()
+{
+    for (auto& HeapIdx : m_QueryHeapIndex)
     {
         if (HeapIdx != QueryManagerD3D12::InvalidIndex)
         {
-            QueryMgr.ReleaseQuery(m_Desc.Type, HeapIdx);
+            VERIFY_EXPR(m_pContext);
+            auto* pQueryMgr = m_pContext.RawPtr<DeviceContextD3D12Impl>()->GetQueryManager();
+            VERIFY_EXPR(pQueryMgr != nullptr);
+            pQueryMgr->ReleaseQuery(m_Desc.Type, HeapIdx);
+            HeapIdx = QueryManagerD3D12::InvalidIndex;
         }
     }
+}
+
+void QueryD3D12Impl::Invalidate()
+{
+    DiscardQueries();
+    TQueryBase::Invalidate();
+}
+
+bool QueryD3D12Impl::AllocateQueries()
+{
+    DiscardQueries();
+    VERIFY_EXPR(m_pContext);
+    auto* pQueryMgr = m_pContext.RawPtr<DeviceContextD3D12Impl>()->GetQueryManager();
+    VERIFY_EXPR(pQueryMgr != nullptr);
+    for (Uint32 i = 0; i < (m_Desc.Type == QUERY_TYPE_DURATION ? Uint32{2} : Uint32{1}); ++i)
+    {
+        m_QueryHeapIndex[i] = pQueryMgr->AllocateQuery(m_Desc.Type);
+        if (m_QueryHeapIndex[i] == QueryManagerD3D12::InvalidIndex)
+        {
+            LOG_ERROR_MESSAGE("Failed to allocate D3D12 query for type ", GetQueryTypeString(m_Desc.Type),
+                              ". Increase the query pool size in EngineD3D12CreateInfo.");
+            DiscardQueries();
+            return false;
+        }
+    }
+    return true;
+}
+
+bool QueryD3D12Impl::OnBeginQuery(DeviceContextD3D12Impl* pContext)
+{
+    TQueryBase::OnBeginQuery(pContext);
+
+    return AllocateQueries();
 }
 
 bool QueryD3D12Impl::OnEndQuery(DeviceContextD3D12Impl* pContext)
 {
     TQueryBase::OnEndQuery(pContext);
+
+    if (m_Desc.Type == QUERY_TYPE_TIMESTAMP)
+    {
+        if (!AllocateQueries())
+            return false;
+    }
+
+    if (m_QueryHeapIndex[0] == QueryManagerD3D12::InvalidIndex || (m_Desc.Type == QUERY_TYPE_DURATION && m_QueryHeapIndex[1] == QueryManagerD3D12::InvalidIndex))
+    {
+        LOG_ERROR_MESSAGE("Query '", m_Desc.Name, "' is invalid: D3D12 query allocation failed");
+        return false;
+    }
 
     auto CmdQueueId      = m_pContext->GetCommandQueueId();
     m_QueryEndFenceValue = m_pDevice->GetNextFenceValue(CmdQueueId);
@@ -89,7 +128,8 @@ bool QueryD3D12Impl::GetData(void* pData, Uint32 DataSize, bool AutoInvalidate)
     auto CompletedFenceValue = m_pDevice->GetCompletedFenceValue(CmdQueueId);
     if (CompletedFenceValue >= m_QueryEndFenceValue)
     {
-        auto& QueryMgr = m_pDevice->GetQueryManager();
+        auto* pQueryMgr = m_pContext->GetQueryManager();
+        VERIFY_EXPR(pQueryMgr != nullptr);
 
         auto GetTimestampFrequency = [this](SoftwareQueueIndex CmdQueueId) //
         {
@@ -107,7 +147,7 @@ bool QueryD3D12Impl::GetData(void* pData, Uint32 DataSize, bool AutoInvalidate)
             case QUERY_TYPE_OCCLUSION:
             {
                 UINT64 NumSamples;
-                QueryMgr.ReadQueryData(m_Desc.Type, m_QueryHeapIndex[0], &NumSamples, sizeof(NumSamples));
+                pQueryMgr->ReadQueryData(m_Desc.Type, m_QueryHeapIndex[0], &NumSamples, sizeof(NumSamples));
                 if (pData != nullptr)
                 {
                     auto& QueryData      = *reinterpret_cast<QueryDataOcclusion*>(pData);
@@ -119,7 +159,7 @@ bool QueryD3D12Impl::GetData(void* pData, Uint32 DataSize, bool AutoInvalidate)
             case QUERY_TYPE_BINARY_OCCLUSION:
             {
                 UINT64 AnySamplePassed;
-                QueryMgr.ReadQueryData(m_Desc.Type, m_QueryHeapIndex[0], &AnySamplePassed, sizeof(AnySamplePassed));
+                pQueryMgr->ReadQueryData(m_Desc.Type, m_QueryHeapIndex[0], &AnySamplePassed, sizeof(AnySamplePassed));
                 if (pData != nullptr)
                 {
                     auto& QueryData = *reinterpret_cast<QueryDataBinaryOcclusion*>(pData);
@@ -133,7 +173,7 @@ bool QueryD3D12Impl::GetData(void* pData, Uint32 DataSize, bool AutoInvalidate)
             case QUERY_TYPE_TIMESTAMP:
             {
                 UINT64 Counter;
-                QueryMgr.ReadQueryData(m_Desc.Type, m_QueryHeapIndex[0], &Counter, sizeof(Counter));
+                pQueryMgr->ReadQueryData(m_Desc.Type, m_QueryHeapIndex[0], &Counter, sizeof(Counter));
                 if (pData != nullptr)
                 {
                     auto& QueryData     = *reinterpret_cast<QueryDataTimestamp*>(pData);
@@ -146,7 +186,7 @@ bool QueryD3D12Impl::GetData(void* pData, Uint32 DataSize, bool AutoInvalidate)
             case QUERY_TYPE_PIPELINE_STATISTICS:
             {
                 D3D12_QUERY_DATA_PIPELINE_STATISTICS d3d12QueryData;
-                QueryMgr.ReadQueryData(m_Desc.Type, m_QueryHeapIndex[0], &d3d12QueryData, sizeof(d3d12QueryData));
+                pQueryMgr->ReadQueryData(m_Desc.Type, m_QueryHeapIndex[0], &d3d12QueryData, sizeof(d3d12QueryData));
                 if (pData != nullptr)
                 {
                     auto& QueryData = *reinterpret_cast<QueryDataPipelineStatistics*>(pData);
@@ -169,8 +209,8 @@ bool QueryD3D12Impl::GetData(void* pData, Uint32 DataSize, bool AutoInvalidate)
             case QUERY_TYPE_DURATION:
             {
                 UINT64 StartCounter, EndCounter;
-                QueryMgr.ReadQueryData(m_Desc.Type, m_QueryHeapIndex[0], &StartCounter, sizeof(StartCounter));
-                QueryMgr.ReadQueryData(m_Desc.Type, m_QueryHeapIndex[1], &EndCounter, sizeof(EndCounter));
+                pQueryMgr->ReadQueryData(m_Desc.Type, m_QueryHeapIndex[0], &StartCounter, sizeof(StartCounter));
+                pQueryMgr->ReadQueryData(m_Desc.Type, m_QueryHeapIndex[1], &EndCounter, sizeof(EndCounter));
                 if (pData != nullptr)
                 {
                     auto& QueryData     = *reinterpret_cast<QueryDataDuration*>(pData);
@@ -199,9 +239,10 @@ bool QueryD3D12Impl::GetData(void* pData, Uint32 DataSize, bool AutoInvalidate)
 
 ID3D12QueryHeap* QueryD3D12Impl::GetD3D12QueryHeap()
 {
-    // This implementation can't be in the header because it requires
-    // definition of RenderDeviceD3D12Impl
-    return m_pDevice->GetQueryManager().GetQueryHeap(m_Desc.Type);
+    VERIFY_EXPR(m_pContext);
+    auto* pQueryMgr = m_pContext.RawPtr<DeviceContextD3D12Impl>()->GetQueryManager();
+    VERIFY_EXPR(pQueryMgr != nullptr);
+    return pQueryMgr->GetQueryHeap(m_Desc.Type);
 }
 
 } // namespace Diligent

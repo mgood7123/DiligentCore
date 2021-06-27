@@ -72,7 +72,7 @@ public:
         return m_CounterFrequency;
     }
 
-    Uint32 ResetStaleQueries(VulkanUtilities::VulkanCommandBuffer& CmdBuff);
+    Uint32 ResetStaleQueries(const VulkanUtilities::VulkanLogicalDevice& LogicalDevice, VulkanUtilities::VulkanCommandBuffer& CmdBuff);
 
 private:
     struct QueryHeapInfo
@@ -90,6 +90,8 @@ private:
     std::array<QueryHeapInfo, QUERY_TYPE_NUM_TYPES> m_Heaps;
 
     Uint64 m_CounterFrequency = 0;
+
+    bool m_HostQueryReset = false;
 };
 
 } // namespace Diligent
