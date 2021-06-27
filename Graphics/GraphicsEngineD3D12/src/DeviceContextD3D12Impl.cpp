@@ -1763,6 +1763,10 @@ void DeviceContextD3D12Impl::CopyTextureRegion(ID3D12Resource*                pd
     auto&       CmdCtx                  = GetCmdContext();
     auto*       pCmdList                = CmdCtx.GetCommandList();
     bool        StateTransitionRequired = false;
+
+    // Flush barriers because raw command list will be used.
+    CmdCtx.FlushResourceBarriers();
+
     if (TextureTransitionMode == RESOURCE_STATE_TRANSITION_MODE_TRANSITION)
     {
         StateTransitionRequired = TextureD3D12.IsInKnownState() && !TextureD3D12.CheckState(RESOURCE_STATE_COPY_DEST);
@@ -1820,11 +1824,11 @@ void DeviceContextD3D12Impl::CopyTextureRegion(ID3D12Resource*                pd
     D3D12SrcBox.bottom = Footprint.Footprint.Height;
     D3D12SrcBox.front  = 0;
     D3D12SrcBox.back   = Footprint.Footprint.Depth;
-    CmdCtx.GetCommandList()->CopyTextureRegion(&DstLocation,
-                                               static_cast<UINT>(DstBox.MinX),
-                                               static_cast<UINT>(DstBox.MinY),
-                                               static_cast<UINT>(DstBox.MinZ),
-                                               &SrcLocation, &D3D12SrcBox);
+    pCmdList->CopyTextureRegion(&DstLocation,
+                                static_cast<UINT>(DstBox.MinX),
+                                static_cast<UINT>(DstBox.MinY),
+                                static_cast<UINT>(DstBox.MinZ),
+                                &SrcLocation, &D3D12SrcBox);
 
     ++m_State.NumCommands;
 
@@ -2215,6 +2219,7 @@ void DeviceContextD3D12Impl::TransitionResourceStates(Uint32 BarrierCount, const
         else
             UNEXPECTED("Unknown resource type");
     }
+    CmdCtx.FlushResourceBarriers();
 }
 
 void DeviceContextD3D12Impl::TransitionOrVerifyBufferState(CommandContext&                CmdCtx,

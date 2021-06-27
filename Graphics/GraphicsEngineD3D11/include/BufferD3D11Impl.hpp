@@ -69,7 +69,7 @@ public:
 
     void AddState(RESOURCE_STATE State)
     {
-        m_State &= ~RESOURCE_STATE_UNDEFINED;
+        m_State &= ~(RESOURCE_STATE_COMMON | RESOURCE_STATE_UNDEFINED);
         m_State |= State;
     }
 
@@ -78,7 +78,7 @@ public:
         VERIFY_EXPR(IsInKnownState());
         m_State &= ~State;
         if (m_State == RESOURCE_STATE_UNKNOWN)
-            m_State = RESOURCE_STATE_UNDEFINED;
+            m_State = RESOURCE_STATE_COMMON;
     }
 
 private:
