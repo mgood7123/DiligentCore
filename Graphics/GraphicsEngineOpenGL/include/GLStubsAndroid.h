@@ -1291,4 +1291,8 @@ extern PFNGLQUERYCOUNTERPROC glQueryCounter;
 #   define GL_KHR_debug 1
 #endif
 
+#ifndef GL_PRIMITIVES_GENERATED
+#   define GL_PRIMITIVES_GENERATED 0x8C87
+#endif
+
 void LoadGLFunctions();

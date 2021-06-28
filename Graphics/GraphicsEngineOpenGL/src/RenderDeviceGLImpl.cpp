@@ -786,7 +786,7 @@ void RenderDeviceGLImpl::InitAdapterInfo()
             ENABLE_FEATURE(TimestampQueries,          false);
             ENABLE_FEATURE(DurationQueries,           false);
 #endif
-            ENABLE_FEATURE(PipelineStatisticsQueries, false);
+            ENABLE_FEATURE(PipelineStatisticsQueries, IsGLES32OrAbove || strstr(Extensions, "ANDROID_extension_pack_es31a") || strstr(Extensions, "EXT_geometry_shader"));
             ENABLE_FEATURE(DepthBiasClamp,            false); // There is no depth bias clamp in OpenGL
             ENABLE_FEATURE(DepthClamp,                strstr(Extensions, "depth_clamp"));
             ENABLE_FEATURE(IndependentBlend,          IsGLES32OrAbove);
