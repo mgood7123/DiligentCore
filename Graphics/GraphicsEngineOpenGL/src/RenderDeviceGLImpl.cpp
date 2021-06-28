@@ -122,7 +122,18 @@ static void GLAPIENTRY openglCallbackFunction(GLenum        source,
 
     MessageSS << "): " << message;
 
-    LOG_INFO_MESSAGE(MessageSS.str().c_str());
+    if (type == GL_DEBUG_TYPE_ERROR || severity == GL_DEBUG_SEVERITY_HIGH)
+    {
+        LOG_ERROR_MESSAGE(MessageSS.str().c_str());
+    }
+    else if (severity == GL_DEBUG_SEVERITY_MEDIUM)
+    {
+        LOG_WARN_MESSAGE(MessageSS.str().c_str());
+    }
+    else
+    {
+        LOG_INFO_MESSAGE(MessageSS.str().c_str());
+    }
 }
 #endif // GL_KHR_debug
 
