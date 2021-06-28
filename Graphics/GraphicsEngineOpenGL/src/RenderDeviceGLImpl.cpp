@@ -128,7 +128,7 @@ static void GLAPIENTRY openglCallbackFunction(GLenum        source,
     }
     else if (severity == GL_DEBUG_SEVERITY_MEDIUM)
     {
-        LOG_WARN_MESSAGE(MessageSS.str().c_str());
+        LOG_WARNING_MESSAGE(MessageSS.str().c_str());
     }
     else
     {
