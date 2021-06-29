@@ -165,6 +165,9 @@ public:
 
     /// Implementation of IRenderDevice::IdleGPU() in OpenGL backend.
     virtual void DILIGENT_CALL_TYPE IdleGPU() override final;
+    
+    /// Implementation of IRenderDevice::UpdateScreenSize() in OpenGL backend.
+    virtual void DILIGENT_CALL_TYPE UpdateScreenSize(const Uint32 w, const Uint32 h) override final;
 
     FBOCache& GetFBOCache(GLContext::NativeGLContextType Context);
     void      OnReleaseTexture(ITexture* pTexture);

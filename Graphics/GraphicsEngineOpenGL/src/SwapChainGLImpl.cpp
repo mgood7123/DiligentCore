@@ -122,7 +122,14 @@ void SwapChainGLImpl::Resize(Uint32 NewWidth, Uint32 NewHeight, SURFACE_TRANSFOR
 #if PLATFORM_ANDROID
     auto* pDeviceGL = m_pRenderDevice.RawPtr<RenderDeviceGLImpl>();
     auto& GLContext = pDeviceGL->m_GLContext;
-    GLContext.UpdateScreenSize();
+    if (GLContext.HasWindow())
+    {
+        GLContext.UpdateScreenSize();
+    }
+    else
+    {
+        GLContext.UpdateScreenSize(NewWidth, NewHeight);
+    }
     const auto ScreenWidth  = static_cast<Uint32>(GLContext.GetScreenWidth());
     const auto ScreenHeight = static_cast<Uint32>(GLContext.GetScreenHeight());
 

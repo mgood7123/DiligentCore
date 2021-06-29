@@ -348,13 +348,36 @@ void GLContext::Terminate()
     context_valid_ = false;
 }
 
+bool GLContext::HasWindow()
+{
+    return window_ != nullptr;
+}
 
 void GLContext::UpdateScreenSize()
 {
+    if (window_ == nullptr)
+    {
+        // nothing to do
+        return;
+    }
     int32_t new_screen_width  = 0;
     int32_t new_screen_height = 0;
     eglQuerySurface(display_, surface_, EGL_WIDTH, &new_screen_width);
     eglQuerySurface(display_, surface_, EGL_HEIGHT, &new_screen_height);
+
+    if (new_screen_width != screen_width_ || new_screen_height != screen_height_)
+    {
+        screen_width_  = new_screen_width;
+        screen_height_ = new_screen_height;
+        //Screen resized
+        LOG_INFO_MESSAGE("Window size changed to ", screen_width_, "x", screen_height_);
+    }
+}
+
+void GLContext::UpdateScreenSize(const Uint32 w, const Uint32 h)
+{
+    int32_t new_screen_width  = w;
+    int32_t new_screen_height = h;
 
     if (new_screen_width != screen_width_ || new_screen_height != screen_height_)
     {

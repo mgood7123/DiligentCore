@@ -186,7 +186,10 @@ public:
 
     /// Implementation of IRenderDevice::IdleGPU() in Vulkan backend.
     virtual void DILIGENT_CALL_TYPE IdleGPU() override final;
-
+    
+    /// Implementation of IRenderDevice::UpdateScreenSize() in Vulkan backend.
+    virtual void DILIGENT_CALL_TYPE UpdateScreenSize(const Uint32 w, const Uint32 h) override final;
+    
     // pImmediateCtx parameter is only used to make sure the command buffer is submitted from the immediate context
     // The method returns fence value associated with the submitted command buffer
     Uint64 ExecuteCommandBuffer(SoftwareQueueIndex CommandQueueId, const VkSubmitInfo& SubmitInfo, std::vector<std::pair<Uint64, RefCntAutoPtr<FenceVkImpl>>>* pSignalFences);

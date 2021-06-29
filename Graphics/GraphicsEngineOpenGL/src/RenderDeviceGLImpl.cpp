@@ -1424,4 +1424,9 @@ void RenderDeviceGLImpl::IdleGPU()
     glFinish();
 }
 
+void RenderDeviceGLImpl::UpdateScreenSize(const Uint32 w, const Uint32 h)
+{
+    m_GLContext.UpdateScreenSize(w, h);
+}
+
 } // namespace Diligent

@@ -413,6 +413,11 @@ void RenderDeviceVkImpl::IdleGPU()
     ReleaseStaleResources();
 }
 
+void RenderDeviceVkImpl::UpdateScreenSize(const Uint32 w, const Uint32 h)
+{
+    LOG_ERROR_AND_THROW("Not implemented in Vulkan");
+}
+
 void RenderDeviceVkImpl::FlushStaleResources(SoftwareQueueIndex CmdQueueIndex)
 {
     // Submit empty command buffer to the queue. This will effectively signal the fence and

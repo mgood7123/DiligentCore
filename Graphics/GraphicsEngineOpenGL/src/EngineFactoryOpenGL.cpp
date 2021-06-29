@@ -95,6 +95,14 @@ public:
     virtual void DILIGENT_CALL_TYPE AttachToActiveGLContext(const EngineGLCreateInfo& EngineCI,
                                                             IRenderDevice**           ppDevice,
                                                             IDeviceContext**          ppImmediateContext) override final;
+    
+    virtual void DILIGENT_CALL_TYPE CreateSwapChainGLAndAttachToActiveGLContext(const EngineGLCreateInfo& EngineCI,
+                                                               IRenderDevice**           ppDevice,
+                                                               IDeviceContext**          ppImmediateContext,
+                                                               const SwapChainDesc&      SCDesc,
+                                                               ISwapChain**              ppSwapChain,
+                                                               const Uint32&             w,
+                                                               const Uint32&             h) override final;
 
     virtual void DILIGENT_CALL_TYPE EnumerateAdapters(Version              MinVersion,
                                                       Uint32&              NumAdapters,
@@ -211,8 +219,8 @@ void EngineFactoryOpenGLImpl::CreateDeviceAndSwapChainGL(const EngineGLCreateInf
                     EngineCI.pImmediateContextInfo ? EngineCI.pImmediateContextInfo[0].Name : nullptr,
                     COMMAND_QUEUE_TYPE_GRAPHICS,
                     False, // IsDeferred
-                    0,     // Context id
-                    0      // QueueId
+                    0,     // Context Id
+                    0      // Queue Id
                 })         //
         };
         // We must call AddRef() (implicitly through QueryInterface()) because pRenderDeviceOpenGL will
@@ -336,6 +344,122 @@ void EngineFactoryOpenGLImpl::AttachToActiveGLContext(const EngineGLCreateInfo& 
         {
             (*ppImmediateContext)->Release();
             *ppImmediateContext = nullptr;
+        }
+
+        LOG_ERROR("Failed to initialize OpenGL-based render device");
+    }
+}
+
+
+/// Creates render device, device context and swap chain for OpenGL/GLES-based engine implementation
+
+/// \param [in]  EngineCI           - Engine creation attributes.
+/// \param [out] ppDevice           - Address of the memory location where pointer to
+///                                   the created device will be written.
+/// \param [out] ppImmediateContext - Address of the memory location where pointers to
+///                                   the immediate context will be written.
+/// \param [in]  SCDesc             - Swap chain description.
+/// \param [out] ppSwapChain        - Address of the memory location where pointer to the new
+///                                   swap chain will be written.
+void EngineFactoryOpenGLImpl::CreateSwapChainGLAndAttachToActiveGLContext(const EngineGLCreateInfo& EngineCI,
+                                                         IRenderDevice**           ppDevice,
+                                                         IDeviceContext**          ppImmediateContext,
+                                                         const SwapChainDesc&      SCDesc,
+                                                         ISwapChain**              ppSwapChain,
+                                                         const Uint32  &           w,
+                                                         const Uint32  &           h)
+{
+    if (EngineCI.DebugMessageCallback != nullptr)
+        SetDebugMessageCallback(EngineCI.DebugMessageCallback);
+
+    if (EngineCI.EngineAPIVersion != DILIGENT_API_VERSION)
+    {
+        LOG_ERROR_MESSAGE("Diligent Engine runtime (", DILIGENT_API_VERSION, ") is not compatible with the client API version (", EngineCI.EngineAPIVersion, ")");
+        return;
+    }
+
+    VERIFY(ppDevice && ppImmediateContext && ppSwapChain, "Null pointer provided");
+    if (!ppDevice || !ppImmediateContext || !ppSwapChain)
+        return;
+
+    if (EngineCI.NumDeferredContexts > 0)
+    {
+        LOG_ERROR_MESSAGE("OpenGL back-end does not support deferred contexts");
+        return;
+    }
+
+    if (EngineCI.NumImmediateContexts > 1)
+    {
+        LOG_ERROR_MESSAGE("OpenGL back-end does not support multiple immediate contexts");
+        return;
+    }
+
+    *ppDevice           = nullptr;
+    *ppImmediateContext = nullptr;
+    *ppSwapChain        = nullptr;
+
+    try
+    {
+        GraphicsAdapterInfo AdapterInfo;
+        SetDefaultGraphicsAdapterInfo(AdapterInfo);
+        VerifyEngineCreateInfo(EngineCI, AdapterInfo);
+
+        SetRawAllocator(EngineCI.pRawMemAllocator);
+        auto& RawMemAllocator = GetRawAllocator();
+
+        RenderDeviceGLImpl* pRenderDeviceOpenGL{
+            NEW_RC_OBJ(RawMemAllocator, "TRenderDeviceGLImpl instance", TRenderDeviceGLImpl)(
+                RawMemAllocator, this, EngineCI, &SCDesc //
+                )                                        //
+        };
+        pRenderDeviceOpenGL->QueryInterface(IID_RenderDevice, reinterpret_cast<IObject**>(ppDevice));
+
+        DeviceContextGLImpl* pDeviceContextOpenGL{
+            NEW_RC_OBJ(RawMemAllocator, "DeviceContextGLImpl instance", DeviceContextGLImpl)(
+                pRenderDeviceOpenGL,
+                DeviceContextDesc{
+                    EngineCI.pImmediateContextInfo ? EngineCI.pImmediateContextInfo[0].Name : nullptr,
+                    COMMAND_QUEUE_TYPE_GRAPHICS,
+                    False, // IsDeferred
+                    0,     // Context Id
+                    0      // Queue Id
+                })         //
+        };
+        // We must call AddRef() (implicitly through QueryInterface()) because pRenderDeviceOpenGL will
+        // keep a weak reference to the context
+        pDeviceContextOpenGL->QueryInterface(IID_DeviceContext, reinterpret_cast<IObject**>(ppImmediateContext));
+        pRenderDeviceOpenGL->SetImmediateContext(0, pDeviceContextOpenGL);
+
+        // since we are attaching, we need up update gl's size
+        // as it is normally obtained from window
+        pRenderDeviceOpenGL->UpdateScreenSize(w, h);
+
+        // Need to create immediate context first
+        pRenderDeviceOpenGL->InitTexRegionRender();
+        
+        TSwapChain* pSwapChainGL = NEW_RC_OBJ(RawMemAllocator, "SwapChainGLImpl instance", TSwapChain)(EngineCI, SCDesc, pRenderDeviceOpenGL, pDeviceContextOpenGL);
+        pSwapChainGL->QueryInterface(IID_SwapChain, reinterpret_cast<IObject**>(ppSwapChain));
+        
+        pDeviceContextOpenGL->SetSwapChain(pSwapChainGL);
+    }
+    catch (const std::runtime_error&)
+    {
+        if (*ppDevice)
+        {
+            (*ppDevice)->Release();
+            *ppDevice = nullptr;
+        }
+
+        if (*ppImmediateContext)
+        {
+            (*ppImmediateContext)->Release();
+            *ppImmediateContext = nullptr;
+        }
+
+        if (*ppSwapChain)
+        {
+            (*ppSwapChain)->Release();
+            *ppSwapChain = nullptr;
         }
 
         LOG_ERROR("Failed to initialize OpenGL-based render device");

@@ -83,6 +83,15 @@ DILIGENT_BEGIN_INTERFACE(IEngineFactoryOpenGL, IEngineFactory)
                                                  const EngineGLCreateInfo REF EngineCI,
                                                  IRenderDevice**              ppDevice,
                                                  IDeviceContext**             ppImmediateContext) PURE;
+    VIRTUAL void METHOD(CreateSwapChainGLAndAttachToActiveGLContext)(THIS_
+                                                    const EngineGLCreateInfo REF EngineCI,
+                                                    IRenderDevice**              ppDevice,
+                                                    IDeviceContext**             ppImmediateContext,
+                                                    const SwapChainDesc REF      SCDesc,
+                                                    ISwapChain**                 ppSwapChain,
+                                                    const Uint32 REF             w,
+                                                    const Uint32 REF             h) PURE;
+    
 };
 DILIGENT_END_INTERFACE
 
