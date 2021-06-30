@@ -349,9 +349,6 @@ DILIGENT_BEGIN_INTERFACE(IRenderDevice, IObject)
     /// \remark This method does not increment the reference counter of the returned interface,
     ///         so the application should not call Release().
     VIRTUAL IEngineFactory* METHOD(GetEngineFactory)(THIS) CONST PURE;
-    
-    /// Private.
-    VIRTUAL void METHOD(UpdateScreenSize)(THIS const Uint32 w, const Uint32 h) PURE;
 };
 DILIGENT_END_INTERFACE
 
@@ -383,7 +380,6 @@ DILIGENT_END_INTERFACE
 #    define IRenderDevice_ReleaseStaleResources(This, ...)           CALL_IFACE_METHOD(RenderDevice, ReleaseStaleResources,           This, __VA_ARGS__)
 #    define IRenderDevice_IdleGPU(This)                              CALL_IFACE_METHOD(RenderDevice, IdleGPU,                         This)
 #    define IRenderDevice_GetEngineFactory(This)                     CALL_IFACE_METHOD(RenderDevice, GetEngineFactory,                This)
-#    define IRenderDevice_UpdateScreenSize(This, ...)                CALL_IFACE_METHOD(RenderDevice, UpdateScreenSize,                This, __VA_ARGS__)
 // clang-format on
 
 #endif
