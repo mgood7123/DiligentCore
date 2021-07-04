@@ -47,9 +47,9 @@ public:
     bool Init(ANativeWindow* window);
 
     void SwapBuffers(int SwapInterval);
-    
+
     bool HasWindow();
-    
+
     void UpdateScreenSize();
 
     void UpdateScreenSize(const Uint32 w, const Uint32 h);

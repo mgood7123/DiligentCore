@@ -95,14 +95,14 @@ public:
     virtual void DILIGENT_CALL_TYPE AttachToActiveGLContext(const EngineGLCreateInfo& EngineCI,
                                                             IRenderDevice**           ppDevice,
                                                             IDeviceContext**          ppImmediateContext) override final;
-    
+
     virtual void DILIGENT_CALL_TYPE CreateSwapChainGLAndAttachToActiveGLContext(const EngineGLCreateInfo& EngineCI,
-                                                               IRenderDevice**           ppDevice,
-                                                               IDeviceContext**          ppImmediateContext,
-                                                               const SwapChainDesc&      SCDesc,
-                                                               ISwapChain**              ppSwapChain,
-                                                               const Uint32&             w,
-                                                               const Uint32&             h) override final;
+                                                                                IRenderDevice**           ppDevice,
+                                                                                IDeviceContext**          ppImmediateContext,
+                                                                                const SwapChainDesc&      SCDesc,
+                                                                                ISwapChain**              ppSwapChain,
+                                                                                const Uint32&             w,
+                                                                                const Uint32&             h) override final;
 
     virtual void DILIGENT_CALL_TYPE EnumerateAdapters(Version              MinVersion,
                                                       Uint32&              NumAdapters,
@@ -362,12 +362,12 @@ void EngineFactoryOpenGLImpl::AttachToActiveGLContext(const EngineGLCreateInfo& 
 /// \param [out] ppSwapChain        - Address of the memory location where pointer to the new
 ///                                   swap chain will be written.
 void EngineFactoryOpenGLImpl::CreateSwapChainGLAndAttachToActiveGLContext(const EngineGLCreateInfo& EngineCI,
-                                                         IRenderDevice**           ppDevice,
-                                                         IDeviceContext**          ppImmediateContext,
-                                                         const SwapChainDesc&      SCDesc,
-                                                         ISwapChain**              ppSwapChain,
-                                                         const Uint32  &           w,
-                                                         const Uint32  &           h)
+                                                                          IRenderDevice**           ppDevice,
+                                                                          IDeviceContext**          ppImmediateContext,
+                                                                          const SwapChainDesc&      SCDesc,
+                                                                          ISwapChain**              ppSwapChain,
+                                                                          const Uint32  &           w,
+                                                                          const Uint32  &           h)
 {
     if (EngineCI.DebugMessageCallback != nullptr)
         SetDebugMessageCallback(EngineCI.DebugMessageCallback);
@@ -436,10 +436,10 @@ void EngineFactoryOpenGLImpl::CreateSwapChainGLAndAttachToActiveGLContext(const 
 
         // Need to create immediate context first
         pRenderDeviceOpenGL->InitTexRegionRender();
-        
+
         TSwapChain* pSwapChainGL = NEW_RC_OBJ(RawMemAllocator, "SwapChainGLImpl instance", TSwapChain)(EngineCI, SCDesc, pRenderDeviceOpenGL, pDeviceContextOpenGL);
         pSwapChainGL->QueryInterface(IID_SwapChain, reinterpret_cast<IObject**>(ppSwapChain));
-        
+
         pDeviceContextOpenGL->SetSwapChain(pSwapChainGL);
     }
     catch (const std::runtime_error&)
