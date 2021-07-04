@@ -166,7 +166,7 @@ public:
     /// Implementation of IRenderDevice::IdleGPU() in OpenGL backend.
     virtual void DILIGENT_CALL_TYPE IdleGPU() override final;
 
-if PLATFORM_ANDROID
+#if PLATFORM_ANDROID
 
     void DILIGENT_CALL_TYPE UpdateScreenSize(const Uint32 w, const Uint32 h);
 
