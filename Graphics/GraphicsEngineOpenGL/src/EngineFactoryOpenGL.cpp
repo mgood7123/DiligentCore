@@ -366,8 +366,8 @@ void EngineFactoryOpenGLImpl::CreateSwapChainGLAndAttachToActiveGLContext(const 
                                                                           IDeviceContext**          ppImmediateContext,
                                                                           const SwapChainDesc&      SCDesc,
                                                                           ISwapChain**              ppSwapChain,
-                                                                          const Uint32  &           w,
-                                                                          const Uint32  &           h)
+                                                                          const Uint32&             w,
+                                                                          const Uint32&             h)
 {
     if (EngineCI.DebugMessageCallback != nullptr)
         SetDebugMessageCallback(EngineCI.DebugMessageCallback);
