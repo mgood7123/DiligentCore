@@ -430,9 +430,13 @@ void EngineFactoryOpenGLImpl::CreateSwapChainGLAndAttachToActiveGLContext(const 
         pDeviceContextOpenGL->QueryInterface(IID_DeviceContext, reinterpret_cast<IObject**>(ppImmediateContext));
         pRenderDeviceOpenGL->SetImmediateContext(0, pDeviceContextOpenGL);
 
+if PLATFORM_ANDROID
+
         // since we are attaching, we need up update gl's size
         // as it is normally obtained from window
         pRenderDeviceOpenGL->UpdateScreenSize(w, h);
+
+#endif
 
         // Need to create immediate context first
         pRenderDeviceOpenGL->InitTexRegionRender();

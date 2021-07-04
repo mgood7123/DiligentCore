@@ -1424,9 +1424,13 @@ void RenderDeviceGLImpl::IdleGPU()
     glFinish();
 }
 
+if PLATFORM_ANDROID
+
 void RenderDeviceGLImpl::UpdateScreenSize(const Uint32 w, const Uint32 h)
 {
     m_GLContext.UpdateScreenSize(w, h);
 }
+
+#endif
 
 } // namespace Diligent
