@@ -106,7 +106,6 @@ protected:
             m_SwapChainDesc.Width  = NewWidth;
             m_SwapChainDesc.Height = NewHeight;
             m_DesiredPreTransform  = NewPreTransform;
-            LOG_INFO_MESSAGE("Resizing the swap chain to ", m_SwapChainDesc.Width, "x", m_SwapChainDesc.Height);
             return true;
         }
 
