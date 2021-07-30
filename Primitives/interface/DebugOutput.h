@@ -53,7 +53,7 @@ enum DEBUG_MESSAGE_SEVERITY
 /// \param [in] Severity - Message severity
 /// \param [in] Message - Debug message
 /// \param [in] Function - Name of the function or nullptr
-/// \param [in] Function - File name or nullptr
+/// \param [in] File - File name or nullptr
 /// \param [in] Line - Line number
 typedef void (*DebugMessageCallbackType)(enum DEBUG_MESSAGE_SEVERITY Severity,
                                          const Char*                 Message,
