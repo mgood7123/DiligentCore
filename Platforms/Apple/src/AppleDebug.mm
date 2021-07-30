@@ -44,7 +44,7 @@ void AppleDebug::OutputDebugMessage(DEBUG_MESSAGE_SEVERITY Severity, const Char 
 {
     auto msg = FormatDebugMessage(Severity, Message, Function, File, Line);
     // NSLog truncates the log at 1024 symbols
-    printf("%s\n", msg.c_str());
+    printf("%s", msg.c_str());
     //NSLog(@"%s", str.c_str());
 }
 
