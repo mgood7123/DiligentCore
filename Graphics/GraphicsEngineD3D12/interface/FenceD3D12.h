@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_FenceD3D12 =
     {0x53c0d8c, 0x3757, 0x4220, {0xa9, 0xcc, 0x47, 0x49, 0xec, 0x47, 0x94, 0xad}};
 
 #define DILIGENT_INTERFACE_NAME IFenceD3D12
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 // clang-format off
 
@@ -58,7 +58,7 @@ DILIGENT_BEGIN_INTERFACE(IFenceD3D12, IFence)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

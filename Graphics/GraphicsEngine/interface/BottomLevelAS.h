@@ -30,8 +30,8 @@
 /// \file
 /// Definition of the Diligent::IBottomLevelAS interface and related data structures
 
-#include "../../../Primitives/interface/Object.h"
-#include "../../../Primitives/interface/FlagEnum.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/Object.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/FlagEnum.h"
 #include "GraphicsTypes.h"
 #include "Constants.h"
 #include "Buffer.h"
@@ -203,7 +203,7 @@ typedef struct ScratchBufferSizes ScratchBufferSizes;
 
 
 #define DILIGENT_INTERFACE_NAME IBottomLevelAS
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IBottomLevelASInclusiveMethods     \
     IDeviceObjectInclusiveMethods;         \
@@ -277,7 +277,7 @@ DILIGENT_BEGIN_INTERFACE(IBottomLevelAS, IDeviceObject)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

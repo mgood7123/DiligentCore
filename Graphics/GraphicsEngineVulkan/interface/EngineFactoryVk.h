@@ -56,7 +56,7 @@ static const INTERFACE_ID IID_EngineFactoryVk =
     {0xf554eee4, 0x57c2, 0x4637, {0xa5, 0x8, 0x85, 0xbe, 0x80, 0xdc, 0x65, 0x7c}};
 
 #define DILIGENT_INTERFACE_NAME IEngineFactoryVk
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IEngineFactoryVkInclusiveMethods \
     IEngineFactoryInclusiveMethods;      \
@@ -109,7 +109,7 @@ DILIGENT_BEGIN_INTERFACE(IEngineFactoryVk, IEngineFactory)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

@@ -40,7 +40,7 @@ static const INTERFACE_ID IID_ShaderBindingTableVk =
     {0x31ed9b4b, 0x4ff4, 0x44d8, {0xae, 0x71, 0x12, 0xb5, 0xd8, 0xaf, 0x7f, 0x93}};
 
 #define DILIGENT_INTERFACE_NAME IShaderBindingTableVk
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IShaderBindingTableVkInclusiveMethods \
     IShaderBindingTableInclusiveMethods;      \
@@ -68,7 +68,7 @@ DILIGENT_BEGIN_INTERFACE(IShaderBindingTableVk, IShaderBindingTable)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

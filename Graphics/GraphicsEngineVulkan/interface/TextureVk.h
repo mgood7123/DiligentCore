@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_TextureVk =
     {0x3bb9155f, 0x22c5, 0x4365, {0x92, 0x7e, 0x8c, 0x40, 0x49, 0xf9, 0xb9, 0x49}};
 
 #define DILIGENT_INTERFACE_NAME ITextureVk
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define ITextureVkInclusiveMethods \
     ITextureInclusiveMethods;      \
@@ -68,7 +68,7 @@ DILIGENT_BEGIN_INTERFACE(ITextureVk, ITexture)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

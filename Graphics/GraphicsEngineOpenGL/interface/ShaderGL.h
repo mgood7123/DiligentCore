@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_ShaderGL =
     {0x2ff3c191, 0x285b, 0x4e6c, {0xbd, 0xb, 0xd0, 0x84, 0xdd, 0xea, 0x6f, 0xcc}};
 
 #define DILIGENT_INTERFACE_NAME IShaderGL
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IShaderGLInclusiveMethods \
     IShaderInclusiveMethods
@@ -53,7 +53,7 @@ DILIGENT_END_INTERFACE
 
 #endif
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

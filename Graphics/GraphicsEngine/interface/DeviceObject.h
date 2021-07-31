@@ -30,7 +30,7 @@
 /// \file
 /// Defines Diligent::IDeviceObject interface
 
-#include "../../../Primitives/interface/Object.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/Object.h"
 #include "GraphicsTypes.h"
 
 DILIGENT_BEGIN_NAMESPACE(Diligent)
@@ -41,7 +41,7 @@ static const INTERFACE_ID IID_DeviceObject =
     {0x5b4cca0b, 0x5075, 0x4230, {0x97, 0x59, 0xf4, 0x87, 0x69, 0xee, 0x55, 0x2}};
 
 #define DILIGENT_INTERFACE_NAME IDeviceObject
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 #define IDeviceObjectInclusiveMethods \
     IObjectInclusiveMethods;          \
     IDeviceObjectMethods DeviceObject
@@ -102,7 +102,7 @@ DILIGENT_END_INTERFACE
 
 // clang-format on
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

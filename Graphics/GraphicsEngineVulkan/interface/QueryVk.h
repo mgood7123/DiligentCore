@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_QueryVk =
     {0x161c015b, 0x1fe2, 0x4452, {0x8b, 0xff, 0xe3, 0x5f, 0x27, 0xb3, 0x10, 0x3c}};
 
 #define DILIGENT_INTERFACE_NAME IQueryVk
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IQueryVkInclusiveMethods \
     IQueryInclusiveMethods
@@ -53,7 +53,7 @@ DILIGENT_END_INTERFACE
 
 #endif
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

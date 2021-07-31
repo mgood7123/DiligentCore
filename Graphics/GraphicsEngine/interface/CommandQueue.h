@@ -29,7 +29,7 @@
 /// \file
 /// Definition of the Diligent::ICommandQueue interface
 
-#include "../../../Primitives/interface/Object.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/Object.h"
 
 DILIGENT_BEGIN_NAMESPACE(Diligent)
 
@@ -38,7 +38,7 @@ static const INTERFACE_ID IID_CommandQueue =
     {0xff427f7, 0x6284, 0x409e, {0x81, 0x61, 0xa0, 0x23, 0xca, 0x7, 0xef, 0x5d}};
 
 #define DILIGENT_INTERFACE_NAME ICommandQueue
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define ICommandQueueInclusiveMethods \
     IObjectInclusiveMethods;          \
@@ -60,7 +60,7 @@ DILIGENT_BEGIN_INTERFACE(ICommandQueue, IObject)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

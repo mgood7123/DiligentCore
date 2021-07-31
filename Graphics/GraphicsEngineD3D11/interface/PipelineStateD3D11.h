@@ -39,7 +39,7 @@ static const struct INTERFACE_ID IID_PipelineStateD3D11 =
     {0x3ea6e3f4, 0x9966, 0x47fc, {0x8c, 0xe8, 0xe, 0xb3, 0xe2, 0x27, 0x30, 0x61}};
 
 #define DILIGENT_INTERFACE_NAME IPipelineStateD3D11
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IPipelineStateD3D11InclusiveMethods \
     IPipelineStateInclusiveMethods;         \
@@ -113,7 +113,7 @@ DILIGENT_BEGIN_INTERFACE(IPipelineStateD3D11, IPipelineState)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

@@ -36,7 +36,7 @@ static const INTERFACE_ID IID_PipelineStateMtl =
     {0xb6a17c51, 0xcca9, 0x44e1, {0xa2, 0xdc, 0x5d, 0xe2, 0x50, 0xcf, 0x85, 0xad}};
 
 #define DILIGENT_INTERFACE_NAME IPipelineStateMtl
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IPipelineStateMtlInclusiveMethods \
     IPipelineStateInclusiveMethods;       \
@@ -56,7 +56,7 @@ DILIGENT_BEGIN_INTERFACE(IPipelineStateMtl, IPipelineState)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

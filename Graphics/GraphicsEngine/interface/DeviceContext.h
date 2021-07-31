@@ -32,8 +32,8 @@
 /// \file
 /// Definition of the Diligent::IDeviceContext interface and related data structures
 
-#include "../../../Primitives/interface/Object.h"
-#include "../../../Primitives/interface/FlagEnum.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/Object.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/FlagEnum.h"
 #include "GraphicsTypes.h"
 #include "Constants.h"
 #include "Buffer.h"
@@ -1628,7 +1628,7 @@ typedef struct StateTransitionDesc StateTransitionDesc;
 
 
 #define DILIGENT_INTERFACE_NAME IDeviceContext
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IDeviceContextInclusiveMethods  \
     IObjectInclusiveMethods;            \
@@ -2760,7 +2760,7 @@ DILIGENT_BEGIN_INTERFACE(IDeviceContext, IObject)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

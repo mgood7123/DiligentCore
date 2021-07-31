@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_FenceGL =
     {0x8feacbda, 0x89d6, 0x4509, {0x88, 0xe6, 0xd5, 0x5d, 0xd0, 0x62, 0x20, 0xc5}};
 
 #define DILIGENT_INTERFACE_NAME IFenceGL
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IFenceGLInclusiveMethods \
     IFenceInclusiveMethods
@@ -53,7 +53,7 @@ DILIGENT_END_INTERFACE
 
 #endif
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

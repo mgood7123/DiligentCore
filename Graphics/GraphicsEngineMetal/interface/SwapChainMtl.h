@@ -37,7 +37,7 @@ static const INTERFACE_ID IID_SwapChainMtl =
     {0x8acdd0d9, 0xff1c, 0x4a78, {0x98, 0x66, 0x92, 0x44, 0x59, 0xa0, 0xd4, 0x56}};
 
 #define DILIGENT_INTERFACE_NAME ISwapChainMtl
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define ISwapChainMtlInclusiveMethods \
     ISwapChainInclusiveMethods
@@ -51,7 +51,7 @@ DILIGENT_END_INTERFACE
 
 #endif
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

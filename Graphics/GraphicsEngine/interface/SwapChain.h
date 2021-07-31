@@ -30,7 +30,7 @@
 /// \file
 /// Definition of the Diligent::ISwapChain interface and related data structures
 
-#include "../../../Primitives/interface/Object.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/Object.h"
 #include "TextureView.h"
 #include "GraphicsTypes.h"
 
@@ -42,7 +42,7 @@ static const INTERFACE_ID IID_SwapChain =
     {0x1c703b77, 0x6607, 0x4eec, {0xb1, 0xfe, 0x15, 0xc8, 0x2d, 0x3b, 0x41, 0x30}};
 
 #define DILIGENT_INTERFACE_NAME ISwapChain
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define ISwapChainInclusiveMethods \
     IObjectInclusiveMethods;       \
@@ -119,7 +119,7 @@ DILIGENT_BEGIN_INTERFACE(ISwapChain, IObject)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

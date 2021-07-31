@@ -39,7 +39,7 @@ static const struct INTERFACE_ID IID_ShaderD3D11 =
     {0xc513e83e, 0xb037, 0x405b, {0x8b, 0x49, 0xbf, 0x8f, 0x5c, 0x22, 0xd, 0xee}};
 
 #define DILIGENT_INTERFACE_NAME IShaderD3D11
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IShaderD3D11InclusiveMethods \
     IShaderD3DInclusiveMethods;      \
@@ -56,7 +56,7 @@ DILIGENT_BEGIN_INTERFACE(IShaderD3D11, IShaderD3D)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

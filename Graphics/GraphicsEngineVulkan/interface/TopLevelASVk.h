@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_TopLevelASVk =
     {0x356ffffa, 0x9e57, 0x49f7, {0x8f, 0xf4, 0x70, 0x17, 0xb6, 0x1b, 0xe6, 0xa8}};
 
 #define DILIGENT_INTERFACE_NAME ITopLevelASVk
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define ITopLevelASVkInclusiveMethods \
     ITopLevelASInclusiveMethods;      \
@@ -56,7 +56,7 @@ DILIGENT_BEGIN_INTERFACE(ITopLevelASVk, ITopLevelAS)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

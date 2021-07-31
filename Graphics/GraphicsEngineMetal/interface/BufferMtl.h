@@ -36,7 +36,7 @@ static const INTERFACE_ID IID_BufferMtl =
     {0xf8a1a3ac, 0x923a, 0x419d, {0xab, 0x9d, 0xfe, 0x9e, 0x35, 0xdc, 0x65, 0x4b}};
 
 #define DILIGENT_INTERFACE_NAME IBufferMtl
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IBufferMtlInclusiveMethods \
     IBufferInclusiveMethods;       \
@@ -52,7 +52,7 @@ DILIGENT_BEGIN_INTERFACE(IBufferMtl, IBuffer)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

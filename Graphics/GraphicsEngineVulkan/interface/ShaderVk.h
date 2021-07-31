@@ -30,7 +30,7 @@
 /// \file
 /// Definition of the Diligent::IShaderVk interface
 
-#include "../../../Primitives/interface/CommonDefinitions.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/CommonDefinitions.h"
 #if DILIGENT_CPP_INTERFACE
 #    include <vector>
 #endif

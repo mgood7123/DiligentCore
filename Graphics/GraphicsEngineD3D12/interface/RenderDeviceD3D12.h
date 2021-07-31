@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_RenderDeviceD3D12 =
     {0xc7987c98, 0x87fe, 0x4309, {0xae, 0x88, 0xe9, 0x8f, 0x4, 0x4b, 0x0, 0xf6}};
 
 #define DILIGENT_INTERFACE_NAME IRenderDeviceD3D12
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IRenderDeviceD3D12InclusiveMethods \
     IRenderDeviceInclusiveMethods;         \
@@ -120,7 +120,7 @@ DILIGENT_BEGIN_INTERFACE(IRenderDeviceD3D12, IRenderDevice)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

@@ -91,7 +91,7 @@ struct ResourceMappingDesc
 typedef struct ResourceMappingDesc ResourceMappingDesc;
 
 #define DILIGENT_INTERFACE_NAME IResourceMapping
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IResourceMappingInclusiveMethods \
     IObjectInclusiveMethods;             \
@@ -170,7 +170,7 @@ DILIGENT_BEGIN_INTERFACE(IResourceMapping, IObject)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

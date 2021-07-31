@@ -32,8 +32,8 @@
 /// \file
 /// Definition of the Diligent::IPipelineResourceSignature interface and related data structures
 
-#include "../../../Primitives/interface/Object.h"
-#include "../../../Platforms/interface/PlatformDefinitions.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/Object.h"
+#include "../../../../../MultiTouch/DiligentLog/Platforms/interface/PlatformDefinitions.h"
 #include "GraphicsTypes.h"
 #include "Shader.h"
 #include "Sampler.h"
@@ -214,7 +214,7 @@ static const INTERFACE_ID IID_PipelineResourceSignature =
     {0xdce499a5, 0xf812, 0x4c93, {0xb1, 0x8, 0xd6, 0x84, 0xa0, 0xb5, 0x61, 0x18}};
 
 #define DILIGENT_INTERFACE_NAME IPipelineResourceSignature
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IPipelineResourceSignatureInclusiveMethods \
     IDeviceObjectInclusiveMethods;     \
@@ -340,7 +340,7 @@ DILIGENT_BEGIN_INTERFACE(IPipelineResourceSignature, IDeviceObject)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

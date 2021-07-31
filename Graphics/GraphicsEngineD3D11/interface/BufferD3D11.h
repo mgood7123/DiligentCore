@@ -39,7 +39,7 @@ static const struct INTERFACE_ID IID_BufferD3D11 =
     {0x4a696d2e, 0x44bb, 0x4c4b, {0x9d, 0xe2, 0x3a, 0xf7, 0xc9, 0x4d, 0xcf, 0xc0}};
 
 #define DILIGENT_INTERFACE_NAME IBufferD3D11
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IBufferD3D11InclusiveMethods \
     IBufferInclusiveMethods;         \
@@ -56,7 +56,7 @@ DILIGENT_BEGIN_INTERFACE(IBufferD3D11, IBuffer)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

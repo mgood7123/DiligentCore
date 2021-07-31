@@ -25,4 +25,4 @@
  *  of the possibility of such damages.
  */
 
-#include "DiligentCore/Platforms/interface/NativeWindow.h"
+#include "../../../../../MultiTouch/DiligentLog/Platforms/interface/NativeWindow.h"

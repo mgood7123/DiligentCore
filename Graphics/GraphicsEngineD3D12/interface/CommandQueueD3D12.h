@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_CommandQueueD3D12 =
     {0xd89693ce, 0xf3f4, 0x44b5, {0xb7, 0xef, 0x24, 0x11, 0x5a, 0xad, 0x8, 0x5e}};
 
 #define DILIGENT_INTERFACE_NAME ICommandQueueD3D12
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define ICommandQueueD3D12InclusiveMethods \
     ICommandQueueInclusiveMethods;         \
@@ -79,7 +79,7 @@ DILIGENT_BEGIN_INTERFACE(ICommandQueueD3D12, ICommandQueue)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

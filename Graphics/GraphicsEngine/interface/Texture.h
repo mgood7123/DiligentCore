@@ -284,7 +284,7 @@ struct MappedTextureSubresource
 typedef struct MappedTextureSubresource MappedTextureSubresource;
 
 #define DILIGENT_INTERFACE_NAME ITexture
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define ITextureInclusiveMethods   \
     IDeviceObjectInclusiveMethods; \
@@ -354,7 +354,7 @@ DILIGENT_BEGIN_INTERFACE(ITexture, IDeviceObject)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

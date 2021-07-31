@@ -30,7 +30,7 @@
 /// \file
 /// Definition of the Diligent::IRenderDevice interface and related data structures
 
-#include "../../../Primitives/interface/Object.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/Object.h"
 #include "EngineFactory.h"
 #include "GraphicsTypes.h"
 #include "Constants.h"
@@ -63,7 +63,7 @@ static const INTERFACE_ID IID_RenderDevice =
     {0xf0e9b607, 0xae33, 0x4b2b, {0xb1, 0xaf, 0xa8, 0xb2, 0xc3, 0x10, 0x40, 0x22}};
 
 #define DILIGENT_INTERFACE_NAME IRenderDevice
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IRenderDeviceInclusiveMethods \
     IObjectInclusiveMethods;          \
@@ -352,7 +352,7 @@ DILIGENT_BEGIN_INTERFACE(IRenderDevice, IObject)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

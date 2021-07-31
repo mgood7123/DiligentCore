@@ -42,7 +42,7 @@ static const INTERFACE_ID IID_EngineFactoryMtl =
     {0xcf4a590d, 0x2e40, 0x4f48, {0x95, 0x79, 0xd, 0x25, 0x99, 0x1f, 0x96, 0x3b}};
 
 #define DILIGENT_INTERFACE_NAME IEngineFactoryMtl
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IEngineFactoryMtlInclusiveMethods \
     IEngineFactoryInclusiveMethods;       \
@@ -116,7 +116,7 @@ DILIGENT_BEGIN_INTERFACE(IEngineFactoryMtl, IEngineFactory)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_TextureViewGL =
     {0x15f93272, 0x6135, 0x414f, {0xab, 0x10, 0x53, 0xff, 0x9a, 0x50, 0x4, 0xad}};
 
 #define DILIGENT_INTERFACE_NAME ITextureViewGL
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define ITextureViewGLInclusiveMethods \
     ITextureViewInclusiveMethods
@@ -57,7 +57,7 @@ DILIGENT_END_INTERFACE
 
 #endif
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

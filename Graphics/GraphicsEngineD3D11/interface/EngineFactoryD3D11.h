@@ -46,7 +46,7 @@ static const struct INTERFACE_ID IID_EngineFactoryD3D11 =
     {0x62663a30, 0xaaf0, 0x4a9a, {0x97, 0x29, 0x9e, 0xac, 0x6b, 0xf7, 0x89, 0xf2}};
 
 #define DILIGENT_INTERFACE_NAME IEngineFactoryD3D11
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IEngineFactoryD3D11InclusiveMethods \
     IEngineFactoryInclusiveMethods;         \
@@ -136,7 +136,7 @@ DILIGENT_BEGIN_INTERFACE(IEngineFactoryD3D11, IEngineFactory)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

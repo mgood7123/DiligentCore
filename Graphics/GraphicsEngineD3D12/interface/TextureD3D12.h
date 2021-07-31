@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_TextureD3D12 =
     {0xcf5522ef, 0x8116, 0x4d76, {0xad, 0xf1, 0x5c, 0xc8, 0xfb, 0x31, 0xff, 0x66}};
 
 #define DILIGENT_INTERFACE_NAME ITextureD3D12
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define ITextureD3D12InclusiveMethods \
     ITextureInclusiveMethods;         \
@@ -69,7 +69,7 @@ DILIGENT_BEGIN_INTERFACE(ITextureD3D12, ITexture)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

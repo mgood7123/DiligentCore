@@ -40,7 +40,7 @@ static const INTERFACE_ID IID_DeviceContextD3D12 =
     {0xdde9e3ab, 0x5109, 0x4026, {0x92, 0xb7, 0xf5, 0xe7, 0xec, 0x83, 0xe2, 0x1e}};
 
 #define DILIGENT_INTERFACE_NAME IDeviceContextD3D12
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IDeviceContextD3D12InclusiveMethods \
     IDeviceContextInclusiveMethods;         \
@@ -88,7 +88,7 @@ DILIGENT_BEGIN_INTERFACE(IDeviceContextD3D12, IDeviceContext)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

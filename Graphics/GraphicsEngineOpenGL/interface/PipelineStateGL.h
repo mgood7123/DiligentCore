@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_PipelineStateGL =
     {0x80666be3, 0x318a, 0x4403, {0xae, 0xe1, 0x6e, 0x61, 0xa5, 0xb7, 0xa0, 0xf9}};
 
 #define DILIGENT_INTERFACE_NAME IPipelineStateGL
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IPipelineStateGLInclusiveMethods \
     IPipelineStateInclusiveMethods
@@ -53,7 +53,7 @@ DILIGENT_END_INTERFACE
 
 #endif
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

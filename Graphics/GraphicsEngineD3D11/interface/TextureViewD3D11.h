@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_TextureViewD3D11 =
     {0x767ebe4, 0xad47, 0x4e70, {0x9b, 0x65, 0x38, 0xc6, 0xb9, 0xca, 0xc3, 0x7d}};
 
 #define DILIGENT_INTERFACE_NAME ITextureViewD3D11
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define ITextureViewD3D11InclusiveMethods \
     ITextureViewInclusiveMethods;         \
@@ -56,7 +56,7 @@ DILIGENT_BEGIN_INTERFACE(ITextureViewD3D11, ITextureView)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

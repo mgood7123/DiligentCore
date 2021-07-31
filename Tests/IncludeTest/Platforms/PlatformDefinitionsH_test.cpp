@@ -25,4 +25,4 @@
  *  of the possibility of such damages.
  */
 
-#include "DiligentCore/Platforms/interface/PlatformDefinitions.h"
+#include "../../../../../MultiTouch/DiligentLog/Platforms/interface/PlatformDefinitions.h"

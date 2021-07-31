@@ -25,4 +25,4 @@
  *  of the possibility of such damages.
  */
 
-#include "DiligentCore/Platforms/interface/FileSystem.hpp"
+#include "../../../../../MultiTouch/DiligentLog/Platforms/interface/FileSystem.hpp"

@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_QueryGL =
     {0xd8a02ab7, 0x720, 0x417d, {0xaa, 0x9b, 0x20, 0xa2, 0xc0, 0x5a, 0x3e, 0xe0}};
 
 #define DILIGENT_INTERFACE_NAME IQueryGL
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IQueryGLInclusiveMethods \
     IQueryInclusiveMethods;      \
@@ -53,7 +53,7 @@ DILIGENT_BEGIN_INTERFACE(IQueryGL, IQuery)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

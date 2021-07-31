@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_QueryD3D12 =
     {0x72d109be, 0x7d70, 0x4e54, {0x84, 0xef, 0xc6, 0x49, 0xda, 0x19, 0xb, 0x2c}};
 
 #define DILIGENT_INTERFACE_NAME IQueryD3D12
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IQueryD3D12InclusiveMethods \
     IQueryInclusiveMethods;         \
@@ -66,7 +66,7 @@ DILIGENT_END_INTERFACE
 
 // clang-format on
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

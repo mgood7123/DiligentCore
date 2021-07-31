@@ -32,7 +32,7 @@
 /// \file
 /// Blend state description
 
-#include "../../../Primitives/interface/BasicTypes.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/BasicTypes.h"
 #include "Constants.h"
 
 DILIGENT_BEGIN_NAMESPACE(Diligent)

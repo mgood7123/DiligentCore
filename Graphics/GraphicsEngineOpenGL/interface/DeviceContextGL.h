@@ -41,7 +41,7 @@ static const INTERFACE_ID IID_DeviceContextGL =
     {0x3464fdf1, 0xc548, 0x4935, {0x96, 0xc3, 0xb4, 0x54, 0xc9, 0xdf, 0x6f, 0x6a}};
 
 #define DILIGENT_INTERFACE_NAME IDeviceContextGL
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IDeviceContextGLInclusiveMethods \
     IDeviceContextInclusiveMethods;      \
@@ -68,7 +68,7 @@ DILIGENT_BEGIN_INTERFACE(IDeviceContextGL, IDeviceContext)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

@@ -25,4 +25,4 @@
  *  of the possibility of such damages.
  */
 
-#include "DiligentCore/Primitives/interface/ReferenceCounters.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/ReferenceCounters.h"

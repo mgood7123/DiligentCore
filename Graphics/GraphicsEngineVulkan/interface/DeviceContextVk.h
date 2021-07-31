@@ -40,7 +40,7 @@ static const INTERFACE_ID IID_DeviceContextVk =
     {0x72aeb1ba, 0xc6ad, 0x42ec, {0x88, 0x11, 0x7e, 0xd9, 0xc7, 0x21, 0x76, 0xbb}};
 
 #define DILIGENT_INTERFACE_NAME IDeviceContextVk
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IDeviceContextVkInclusiveMethods \
     IDeviceContextInclusiveMethods;      \
@@ -87,7 +87,7 @@ DILIGENT_BEGIN_INTERFACE(IDeviceContextVk, IDeviceContext)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

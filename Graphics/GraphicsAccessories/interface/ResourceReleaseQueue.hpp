@@ -36,10 +36,10 @@
 #include <mutex>
 #include <deque>
 
-#include "../../../Primitives/interface/MemoryAllocator.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/MemoryAllocator.h"
 #include "../../../Common/interface/STDAllocator.hpp"
-#include "../../../Platforms/interface/Atomics.hpp"
-#include "../../../Platforms/Basic/interface/DebugUtilities.hpp"
+#include "../../../../../MultiTouch/DiligentLog/Platforms/interface/Atomics.hpp"
+#include "../../../../../MultiTouch/DiligentLog/Platforms/Basic/interface/DebugUtilities.hpp"
 
 namespace Diligent
 {

@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_RenderDeviceVk =
     {0xab8cf3a6, 0xd959, 0x41c1, {0xae, 0x0, 0xa5, 0x8a, 0xe9, 0x82, 0xe, 0x6a}};
 
 #define DILIGENT_INTERFACE_NAME IRenderDeviceVk
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IRenderDeviceVkInclusiveMethods \
     IRenderDeviceInclusiveMethods;      \
@@ -160,7 +160,7 @@ DILIGENT_BEGIN_INTERFACE(IRenderDeviceVk, IRenderDevice)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

@@ -32,8 +32,8 @@
 
 
 #include <deque>
-#include "../../../Primitives/interface/MemoryAllocator.h"
-#include "../../../Platforms/Basic/interface/DebugUtilities.hpp"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/MemoryAllocator.h"
+#include "../../../../../MultiTouch/DiligentLog/Platforms/Basic/interface/DebugUtilities.hpp"
 #include "../../../Common/interface/Align.hpp"
 #include "../../../Common/interface/STDAllocator.hpp"
 

@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_RenderPassVk =
     {0x3de6938f, 0xd34d, 0x4135, {0xa6, 0xfa, 0x15, 0xa8, 0x9e, 0x95, 0x25, 0xd0}};
 
 #define DILIGENT_INTERFACE_NAME IRenderPassVk
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IRenderPassVkInclusiveMethods                              \
     /*IRenderPassInclusiveMethods*/ IDeviceObjectInclusiveMethods; \
@@ -53,7 +53,7 @@ DILIGENT_BEGIN_INTERFACE(IRenderPassVk, IRenderPass)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

@@ -36,7 +36,7 @@ static const INTERFACE_ID IID_TopLevelASMtl =
     {0x2156c051, 0x350d, 0x4fce, {0x84, 0xf3, 0x29, 0x5b, 0x53, 0x66, 0x22, 0xd3}};
 
 #define DILIGENT_INTERFACE_NAME ITopLevelASMtl
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define ITopLevelASMtlInclusiveMethods \
     ITopLevelASInclusiveMethods;       \
@@ -52,7 +52,7 @@ DILIGENT_BEGIN_INTERFACE(ITopLevelASMtl, ITopLevelAS)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

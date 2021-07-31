@@ -37,7 +37,7 @@ static const INTERFACE_ID IID_DeviceContextMtl =
     {0x2dea7704, 0xc586, 0x4ba7, {0xb9, 0x38, 0x93, 0xb2, 0x39, 0xdf, 0xa2, 0x68}};
 
 #define DILIGENT_INTERFACE_NAME IDeviceContextMtl
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IDeviceContextMtlInclusiveMethods \
     IDeviceContextInclusiveMethods;       \
@@ -88,7 +88,7 @@ DILIGENT_BEGIN_INTERFACE(IDeviceContextMtl, IDeviceContext)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

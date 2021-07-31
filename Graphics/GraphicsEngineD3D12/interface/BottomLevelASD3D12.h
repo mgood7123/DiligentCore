@@ -40,7 +40,7 @@ static const INTERFACE_ID IID_BottomLevelASD3D12 =
     {0x610228af, 0xf161, 0x4b12, {0xa0, 0xe, 0x71, 0xe6, 0xe3, 0xbb, 0x97, 0xfe}};
 
 #define DILIGENT_INTERFACE_NAME IBottomLevelASD3D12
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IBottomLevelASD3D12InclusiveMethods \
     IBottomLevelASInclusiveMethods;         \
@@ -59,7 +59,7 @@ DILIGENT_BEGIN_INTERFACE(IBottomLevelASD3D12, IBottomLevelAS)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

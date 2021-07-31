@@ -40,7 +40,7 @@ static const INTERFACE_ID IID_SwapChainVk =
     {0x22a39881, 0x5ec5, 0x4a9c, {0x83, 0x95, 0x90, 0x21, 0x5f, 0x4, 0xa5, 0xcc}};
 
 #define DILIGENT_INTERFACE_NAME ISwapChainVk
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define ISwapChainVkInclusiveMethods \
     ISwapChainInclusiveMethods;      \
@@ -54,7 +54,7 @@ DILIGENT_BEGIN_INTERFACE(ISwapChainVk, ISwapChain)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

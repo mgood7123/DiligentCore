@@ -32,10 +32,10 @@
 /// \file
 /// Contains basic graphics engine type definitions
 
-#include "../../../Primitives/interface/BasicTypes.h"
-#include "../../../Primitives/interface/DebugOutput.h"
-#include "../../../Primitives/interface/FlagEnum.h"
-#include "../../../Platforms/interface/NativeWindow.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/BasicTypes.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DebugOutput.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/FlagEnum.h"
+#include "../../../../../MultiTouch/DiligentLog/Platforms/interface/NativeWindow.h"
 #include "APIInfo.h"
 #include "Constants.h"
 

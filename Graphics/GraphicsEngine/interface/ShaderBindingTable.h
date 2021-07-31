@@ -30,8 +30,8 @@
 /// \file
 /// Definition of Diligent::IShaderBindingTable interface and related data structures
 
-#include "../../../Primitives/interface/Object.h"
-#include "../../../Primitives/interface/FlagEnum.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/Object.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/FlagEnum.h"
 #include "GraphicsTypes.h"
 #include "Constants.h"
 #include "Buffer.h"
@@ -81,7 +81,7 @@ DEFINE_FLAG_ENUM_OPERATORS(VERIFY_SBT_FLAGS)
 
 
 #define DILIGENT_INTERFACE_NAME IShaderBindingTable
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IShaderBindingTableInclusiveMethods      \
     IDeviceObjectInclusiveMethods;               \
@@ -291,7 +291,7 @@ DILIGENT_BEGIN_INTERFACE(IShaderBindingTable, IDeviceObject)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

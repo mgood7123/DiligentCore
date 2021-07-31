@@ -48,7 +48,7 @@ static const INTERFACE_ID IID_EngineFactoryD3D12 =
     {0x72bd38b0, 0x684a, 0x4889, {0x9c, 0x68, 0xa, 0x80, 0xec, 0x80, 0x2d, 0xde}};
 
 #define DILIGENT_INTERFACE_NAME IEngineFactoryD3D12
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 // clang-format off
 
@@ -169,7 +169,7 @@ DILIGENT_BEGIN_INTERFACE(IEngineFactoryD3D12, IEngineFactory)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

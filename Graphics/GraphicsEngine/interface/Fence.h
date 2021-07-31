@@ -74,7 +74,7 @@ typedef struct FenceDesc FenceDesc;
 // clang-format off
 
 #define DILIGENT_INTERFACE_NAME IFence
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IFenceInclusiveMethods      \
     IDeviceObjectInclusiveMethods;  \
@@ -128,7 +128,7 @@ DILIGENT_BEGIN_INTERFACE(IFence, IDeviceObject)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

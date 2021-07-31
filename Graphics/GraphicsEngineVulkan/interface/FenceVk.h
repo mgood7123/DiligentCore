@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_FenceVk =
     {0x7610b4cd, 0xedea, 0x4951, {0x82, 0xcf, 0x52, 0xf9, 0x7f, 0xaf, 0xed, 0x2d}};
 
 #define DILIGENT_INTERFACE_NAME IFenceVk
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IFenceVkInclusiveMethods \
     IFenceInclusiveMethods;      \
@@ -55,7 +55,7 @@ DILIGENT_BEGIN_INTERFACE(IFenceVk, IFence)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

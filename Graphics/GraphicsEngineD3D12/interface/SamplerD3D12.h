@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_SamplerD3D12 =
     {0x31a3bfaf, 0x738e, 0x4d8c, {0xad, 0x18, 0xb0, 0x21, 0xc5, 0xd9, 0x48, 0xdd}};
 
 #define DILIGENT_INTERFACE_NAME ISamplerD3D12
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define ISamplerD3D12InclusiveMethods \
     ISamplerInclusiveMethods;         \
@@ -56,7 +56,7 @@ DILIGENT_BEGIN_INTERFACE(ISamplerD3D12, ISampler)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

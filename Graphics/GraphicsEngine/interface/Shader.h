@@ -30,8 +30,8 @@
 /// \file
 /// Definition of the Diligent::IShader interface and related data structures
 
-#include "../../../Primitives/interface/FileStream.h"
-#include "../../../Primitives/interface/FlagEnum.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/FileStream.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/FlagEnum.h"
 #include "DeviceObject.h"
 
 DILIGENT_BEGIN_NAMESPACE(Diligent)
@@ -128,7 +128,7 @@ static const INTERFACE_ID IID_IShaderSourceInputStreamFactory =
 // clang-format off
 
 #define DILIGENT_INTERFACE_NAME IShaderSourceInputStreamFactory
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IShaderSourceInputStreamFactoryInclusiveMethods \
     IObjectInclusiveMethods;                            \
@@ -148,7 +148,7 @@ DILIGENT_BEGIN_INTERFACE(IShaderSourceInputStreamFactory, IObject)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 
@@ -375,7 +375,7 @@ struct ShaderResourceDesc
 typedef struct ShaderResourceDesc ShaderResourceDesc;
 
 #define DILIGENT_INTERFACE_NAME IShader
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IShaderInclusiveMethods    \
     IDeviceObjectInclusiveMethods; \
@@ -401,7 +401,7 @@ DILIGENT_BEGIN_INTERFACE(IShader, IDeviceObject)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

@@ -34,7 +34,7 @@
 #include <map>
 #include <unordered_map>
 
-#include "../../../Primitives/interface/BasicTypes.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/BasicTypes.h"
 #include "../../../Common/interface/HashUtils.hpp"
 
 namespace Diligent

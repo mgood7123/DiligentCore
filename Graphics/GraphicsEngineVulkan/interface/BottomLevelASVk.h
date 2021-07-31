@@ -40,7 +40,7 @@ static const INTERFACE_ID IID_BottomLevelASVk =
     {0x7212afc9, 0x2e2, 0x4d7f, {0x81, 0xa8, 0x1c, 0xe5, 0x35, 0x3c, 0xea, 0x2d}};
 
 #define DILIGENT_INTERFACE_NAME IBottomLevelASVk
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IBottomLevelASVkInclusiveMethods \
     IBottomLevelASInclusiveMethods;      \
@@ -57,7 +57,7 @@ DILIGENT_BEGIN_INTERFACE(IBottomLevelASVk, IBottomLevelAS)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

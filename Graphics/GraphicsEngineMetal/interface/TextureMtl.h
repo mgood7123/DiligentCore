@@ -36,7 +36,7 @@ static const INTERFACE_ID IID_TextureMtl =
     {0xd3a85032, 0x224d, 0x45e5, {0x98, 0x25, 0x3a, 0xab, 0xd6, 0x1a, 0x5e, 0xa5}};
 
 #define DILIGENT_INTERFACE_NAME ITextureMtl
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define ITextureMtlInclusiveMethods \
     ITextureInclusiveMethods;       \
@@ -54,7 +54,7 @@ DILIGENT_BEGIN_INTERFACE(ITextureMtl, ITexture)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

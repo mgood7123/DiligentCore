@@ -59,7 +59,7 @@ static const INTERFACE_ID IID_EngineFactoryOpenGL =
     {0x9baac767, 0x2cc, 0x4ffa, {0x9e, 0x4b, 0xe1, 0x34, 0xf, 0x57, 0x2c, 0x49}};
 
 #define DILIGENT_INTERFACE_NAME IEngineFactoryOpenGL
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IEngineFactoryOpenGLInclusiveMethods \
     IEngineFactoryInclusiveMethods;          \
@@ -95,7 +95,7 @@ DILIGENT_BEGIN_INTERFACE(IEngineFactoryOpenGL, IEngineFactory)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

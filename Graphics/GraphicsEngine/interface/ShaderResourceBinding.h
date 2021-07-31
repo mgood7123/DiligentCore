@@ -30,7 +30,7 @@
 /// \file
 /// Definition of the Diligent::IShaderResourceBinding interface and related data structures
 
-#include "../../../Primitives/interface/Object.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/Object.h"
 #include "Shader.h"
 #include "ShaderResourceVariable.h"
 #include "ResourceMapping.h"
@@ -46,7 +46,7 @@ static const INTERFACE_ID IID_ShaderResourceBinding =
 
 
 #define DILIGENT_INTERFACE_NAME IShaderResourceBinding
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IShaderResourceBindingInclusiveMethods \
     IObjectInclusiveMethods;                   \
@@ -154,7 +154,7 @@ DILIGENT_BEGIN_INTERFACE(IShaderResourceBinding, IObject)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

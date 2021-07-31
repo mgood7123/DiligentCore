@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_CommandQueueVk =
     {0x9fbf582f, 0x3069, 0x41b9, {0xac, 0x5, 0x34, 0x4d, 0x5a, 0xf5, 0xce, 0x8c}};
 
 #define DILIGENT_INTERFACE_NAME ICommandQueueVk
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define ICommandQueueVkInclusiveMethods \
     ICommandQueueInclusiveMethods;      \
@@ -89,7 +89,7 @@ DILIGENT_BEGIN_INTERFACE(ICommandQueueVk, ICommandQueue)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

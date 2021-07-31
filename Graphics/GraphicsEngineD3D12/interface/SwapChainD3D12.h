@@ -42,7 +42,7 @@ static const INTERFACE_ID IID_SwapChainD3D12 =
     {0xc9f8384d, 0xa45e, 0x4970, {0x84, 0x47, 0x39, 0x41, 0x77, 0xe5, 0xb0, 0xee}};
 
 #define DILIGENT_INTERFACE_NAME ISwapChainD3D12
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define ISwapChainD3D12InclusiveMethods \
     ISwapChainInclusiveMethods;         \
@@ -59,7 +59,7 @@ DILIGENT_BEGIN_INTERFACE(ISwapChainD3D12, ISwapChain)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

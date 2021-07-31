@@ -172,7 +172,7 @@ struct SamplerDesc DILIGENT_DERIVE(DeviceObjectAttribs)
 typedef struct SamplerDesc SamplerDesc;
 
 #define DILIGENT_INTERFACE_NAME ISampler
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 // clang-format off
 #define ISamplerInclusiveMethods  \
@@ -201,7 +201,7 @@ DILIGENT_END_INTERFACE
 #endif
 
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

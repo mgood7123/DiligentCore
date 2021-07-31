@@ -52,7 +52,7 @@ typedef struct HLSLShaderResourceDesc HLSLShaderResourceDesc;
 // clang-format on
 
 #define DILIGENT_INTERFACE_NAME IShaderD3D
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IShaderD3DInclusiveMethods \
     IShaderInclusiveMethods;       \
@@ -70,7 +70,7 @@ DILIGENT_BEGIN_INTERFACE(IShaderD3D, IShader)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

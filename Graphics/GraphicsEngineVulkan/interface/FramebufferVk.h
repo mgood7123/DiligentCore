@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_FramebufferVk =
     {0x846be360, 0xd89b, 0x41ad, {0xb0, 0x89, 0x7f, 0x24, 0x39, 0xad, 0xce, 0x3a}};
 
 #define DILIGENT_INTERFACE_NAME IFramebufferVk
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IFramebufferVkInclusiveMethods                              \
     /*IFramebufferInclusiveMethods*/ IDeviceObjectInclusiveMethods; \
@@ -53,7 +53,7 @@ DILIGENT_BEGIN_INTERFACE(IFramebufferVk, IFramebuffer)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

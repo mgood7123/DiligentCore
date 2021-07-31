@@ -40,7 +40,7 @@ static const INTERFACE_ID IID_RenderDeviceMtl =
     {0x8d483e4a, 0x2d53, 0x47b2, {0xb8, 0xd7, 0x27, 0x6f, 0x4c, 0xe5, 0x7f, 0x68}};
 
 #define DILIGENT_INTERFACE_NAME IRenderDeviceMtl
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IRenderDeviceMtlInclusiveMethods \
     IRenderDeviceInclusiveMethods;       \
@@ -83,7 +83,7 @@ DILIGENT_BEGIN_INTERFACE(IRenderDeviceMtl, IRenderDevice)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

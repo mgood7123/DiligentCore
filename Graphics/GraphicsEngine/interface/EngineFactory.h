@@ -30,7 +30,7 @@
 /// \file
 /// Defines Diligent::IEngineFactory interface
 
-#include "../../../Primitives/interface/Object.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/Object.h"
 #include "GraphicsTypes.h"
 
 
@@ -48,7 +48,7 @@ static const INTERFACE_ID IID_EngineFactory =
     {0xd932b052, 0x4ed6, 0x4729, {0xa5, 0x32, 0xf3, 0x1d, 0xee, 0xc1, 0x0, 0xf3}};
 
 #define DILIGENT_INTERFACE_NAME IEngineFactory
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IEngineFactoryInclusiveMethods \
     IObjectInclusiveMethods;           \
@@ -110,7 +110,7 @@ DILIGENT_END_INTERFACE
 
 // clang-format on
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

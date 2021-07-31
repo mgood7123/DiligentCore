@@ -199,7 +199,7 @@ struct BufferData
 typedef struct BufferData BufferData;
 
 #define DILIGENT_INTERFACE_NAME IBuffer
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IBufferInclusiveMethods     \
     IDeviceObjectInclusiveMethods;  \
@@ -316,7 +316,7 @@ DILIGENT_BEGIN_INTERFACE(IBuffer, IDeviceObject)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

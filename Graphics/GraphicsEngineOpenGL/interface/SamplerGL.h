@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_SamplerGL =
     {0x3e9eb89e, 0xe955, 0x447a, {0x9d, 0x13, 0x92, 0xc1, 0x5, 0x41, 0xf7, 0x27}};
 
 #define DILIGENT_INTERFACE_NAME ISamplerGL
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define ISamplerGLInclusiveMethods \
     ISamplerInclusiveMethods
@@ -53,7 +53,7 @@ DILIGENT_END_INTERFACE
 
 #endif
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

@@ -36,7 +36,7 @@ static const INTERFACE_ID IID_SamplerMtl =
     {0x73f8c099, 0x49b, 0x4c81, {0xad, 0x19, 0xc9, 0x89, 0x63, 0xac, 0x7f, 0xeb}};
 
 #define DILIGENT_INTERFACE_NAME ISamplerMtl
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define ISamplerMtlInclusiveMethods \
     ISamplerInclusiveMethods;       \
@@ -49,7 +49,7 @@ DILIGENT_BEGIN_INTERFACE(ISamplerMtl, ISampler)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_BufferViewVk =
     {0xcb67024a, 0x1e23, 0x4202, {0xa4, 0x9a, 0x7, 0xb6, 0xbc, 0xea, 0xbc, 0x6}};
 
 #define DILIGENT_INTERFACE_NAME IBufferViewVk
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IBufferViewVkInclusiveMethods \
     IBufferViewInclusiveMethods;      \
@@ -55,7 +55,7 @@ DILIGENT_BEGIN_INTERFACE(IBufferViewVk, IBufferView)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

@@ -39,7 +39,7 @@ static const struct INTERFACE_ID IID_ShaderResourceBindingD3D11 =
     {0x97a6d4ac, 0xd4af, 0x4aa9, {0xb4, 0x6c, 0x67, 0x41, 0x7b, 0x89, 0x2, 0x6a}};
 
 #define DILIGENT_INTERFACE_NAME IShaderResourceBindingD3D11
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 // clang-format off
 #define IShaderResourceBindingD3D11InclusiveMethods \
@@ -55,7 +55,7 @@ DILIGENT_END_INTERFACE
 
 #endif
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

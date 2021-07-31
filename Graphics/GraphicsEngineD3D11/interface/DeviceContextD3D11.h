@@ -39,7 +39,7 @@ static const struct INTERFACE_ID IID_DeviceContextD3D11 =
     {0xf0ee0335, 0xc8ab, 0x4ec1, {0xbb, 0x15, 0xb8, 0xee, 0x5f, 0x0, 0x3b, 0x99}};
 
 #define DILIGENT_INTERFACE_NAME IDeviceContextD3D11
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IDeviceContextD3D11InclusiveMethods \
     IDeviceContextInclusiveMethods;         \
@@ -56,7 +56,7 @@ DILIGENT_BEGIN_INTERFACE(IDeviceContextD3D11, IDeviceContext)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

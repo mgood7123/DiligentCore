@@ -30,9 +30,9 @@
 /// \file
 /// Definition of the Diligent::IShaderResourceVariable interface and related data structures
 
-#include "../../../Primitives/interface/BasicTypes.h"
-#include "../../../Primitives/interface/Object.h"
-#include "../../../Primitives/interface/FlagEnum.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/BasicTypes.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/Object.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/FlagEnum.h"
 #include "DeviceObject.h"
 #include "Shader.h"
 
@@ -132,7 +132,7 @@ DEFINE_FLAG_ENUM_OPERATORS(BIND_SHADER_RESOURCES_FLAGS);
 // clang-format on
 
 #define DILIGENT_INTERFACE_NAME IShaderResourceVariable
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IShaderResourceVariableInclusiveMethods \
     IObjectInclusiveMethods;                    \
@@ -235,7 +235,7 @@ DILIGENT_BEGIN_INTERFACE(IShaderResourceVariable, IObject)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

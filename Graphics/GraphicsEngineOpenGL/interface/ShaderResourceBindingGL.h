@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_ShaderResourceBindingGL =
     {0x41db0329, 0xb6d2, 0x4470, {0x9a, 0x58, 0xd4, 0x4c, 0xf4, 0x69, 0x5f, 0xc6}};
 
 #define DILIGENT_INTERFACE_NAME IShaderResourceBindingGL
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IShaderResourceBindingGLInclusiveMethods \
     IShaderResourceBindingInclusiveMethods
@@ -53,7 +53,7 @@ DILIGENT_END_INTERFACE
 
 #endif
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

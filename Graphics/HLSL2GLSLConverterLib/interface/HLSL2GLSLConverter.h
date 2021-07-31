@@ -31,7 +31,7 @@
 /// Definition of the Diligent::IHLSL2GLSLConverter interface
 
 #include "../../GraphicsEngine/interface/Shader.h"
-#include "../../../Primitives/interface/DataBlob.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DataBlob.h"
 
 DILIGENT_BEGIN_NAMESPACE(Diligent)
 
@@ -41,7 +41,7 @@ static const INTERFACE_ID IID_HLSL2GLSLConversionStream =
 
 
 #define DILIGENT_INTERFACE_NAME IHLSL2GLSLConversionStream
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IHLSL2GLSLConversionStreamInclusiveMethods \
     IObjectInclusiveMethods;                       \
@@ -61,7 +61,7 @@ DILIGENT_BEGIN_INTERFACE(IHLSL2GLSLConversionStream, IObject)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 
@@ -79,7 +79,7 @@ static const INTERFACE_ID IID_HLSL2GLSLConverter =
     {0x44a21160, 0x77e0, 0x4ddc, {0xa5, 0x7e, 0xb8, 0xb8, 0xb6, 0x5b, 0x53, 0x42}};
 
 #define DILIGENT_INTERFACE_NAME IHLSL2GLSLConverter
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IHLSL2GLSLConverterInclusiveMethods \
     IObjectInclusiveMethods;                \
@@ -99,7 +99,7 @@ DILIGENT_BEGIN_INTERFACE(IHLSL2GLSLConverter, IObject)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

@@ -41,7 +41,7 @@ static const INTERFACE_ID IID_RenderDeviceGLES =
     {0xf705a0d9, 0x2023, 0x4de1, {0x8b, 0x3c, 0xc5, 0x6e, 0x4c, 0xeb, 0x8d, 0xb7}};
 
 #define DILIGENT_INTERFACE_NAME IRenderDeviceGLES
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IRenderDeviceGLESInclusiveMethods \
     IRenderDeviceGLInclusiveMethods;      \
@@ -61,7 +61,7 @@ DILIGENT_BEGIN_INTERFACE(IRenderDeviceGLES, IRenderDeviceGL)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

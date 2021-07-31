@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_BufferViewGL =
     {0x927a865b, 0x3ceb, 0x4743, {0x9a, 0x22, 0x2a, 0x13, 0x97, 0xa7, 0x3e, 0x6d}};
 
 #define DILIGENT_INTERFACE_NAME IBufferViewGL
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IBufferViewGLInclusiveMethods \
     IBufferViewInclusiveMethods
@@ -53,7 +53,7 @@ DILIGENT_END_INTERFACE
 
 #endif
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

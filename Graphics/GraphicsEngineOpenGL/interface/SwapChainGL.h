@@ -43,7 +43,7 @@ static const INTERFACE_ID IID_SwapChainGL =
     ISwapChainGLMethods SwapChainGL
 
 #define DILIGENT_INTERFACE_NAME ISwapChainGL
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 /// Exposes OpenGL-specific functionality of a swap chain.
 DILIGENT_BEGIN_INTERFACE(ISwapChainGL, ISwapChain)
@@ -53,7 +53,7 @@ DILIGENT_BEGIN_INTERFACE(ISwapChainGL, ISwapChain)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

@@ -38,7 +38,7 @@ static const INTERFACE_ID IID_CommandQueueMtl =
     {0x1c0013cb, 0x41b8, 0x453d, {0x89, 0x83, 0x4d, 0x93, 0x5f, 0x59, 0x73, 0xb0}};
 
 #define DILIGENT_INTERFACE_NAME ICommandQueueMtl
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define ICommandQueueMtlInclusiveMethods \
     ICommandQueueInclusiveMethods;       \
@@ -60,7 +60,7 @@ DILIGENT_BEGIN_INTERFACE(ICommandQueueMtl, ICommandQueue)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

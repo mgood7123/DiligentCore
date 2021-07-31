@@ -39,7 +39,7 @@ static const struct INTERFACE_ID IID_QueryD3D11 =
     {0x77d95eaa, 0xd16e, 0x43f4, {0xb0, 0xeb, 0xbe, 0xbc, 0xd2, 0xec, 0x8c, 0x57}};
 
 #define DILIGENT_INTERFACE_NAME IQueryD3D11
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IQueryD3D11InclusiveMethods \
     IQueryInclusiveMethods;         \
@@ -63,7 +63,7 @@ DILIGENT_END_INTERFACE
 
 // clang-format on
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

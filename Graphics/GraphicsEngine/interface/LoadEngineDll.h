@@ -33,7 +33,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "../../../Primitives/interface/CommonDefinitions.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/CommonDefinitions.h"
 
 #if PLATFORM_UNIVERSAL_WINDOWS
 #    include "../../../Common/interface/StringTools.hpp"

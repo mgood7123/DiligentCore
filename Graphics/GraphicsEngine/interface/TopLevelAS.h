@@ -30,8 +30,8 @@
 /// \file
 /// Definition of the Diligent::ITopLevelAS interface and related data structures
 
-#include "../../../Primitives/interface/Object.h"
-#include "../../../Primitives/interface/FlagEnum.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/Object.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/FlagEnum.h"
 #include "GraphicsTypes.h"
 #include "Constants.h"
 #include "Buffer.h"
@@ -147,7 +147,7 @@ typedef struct TLASInstanceDesc TLASInstanceDesc;
 
 
 #define DILIGENT_INTERFACE_NAME ITopLevelAS
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define ITopLevelASInclusiveMethods        \
     IDeviceObjectInclusiveMethods;         \
@@ -212,7 +212,7 @@ DILIGENT_BEGIN_INTERFACE(ITopLevelAS, IDeviceObject)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

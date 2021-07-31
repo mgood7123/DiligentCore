@@ -32,8 +32,8 @@
 /// \file
 /// Definition of the Diligent::IRenderDevice interface and related data structures
 
-#include "../../../Primitives/interface/Object.h"
-#include "../../../Platforms/interface/PlatformDefinitions.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/Object.h"
+#include "../../../../../MultiTouch/DiligentLog/Platforms/interface/PlatformDefinitions.h"
 #include "GraphicsTypes.h"
 #include "BlendState.h"
 #include "RasterizerState.h"
@@ -582,7 +582,7 @@ static const struct INTERFACE_ID IID_PipelineState =
     {0x6084ae5, 0x6a71, 0x4fe8, {0x84, 0xb9, 0x39, 0x5d, 0xd4, 0x89, 0xa2, 0x8c}};
 
 #define DILIGENT_INTERFACE_NAME IPipelineState
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IPipelineStateInclusiveMethods \
     IDeviceObjectInclusiveMethods;     \
@@ -766,7 +766,7 @@ DILIGENT_BEGIN_INTERFACE(IPipelineState, IDeviceObject)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

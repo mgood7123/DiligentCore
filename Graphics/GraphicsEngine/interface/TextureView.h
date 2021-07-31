@@ -32,7 +32,7 @@
 /// \file
 /// Definition of the Diligent::ITextureView interface and related data structures
 
-#include "../../../Primitives/interface/FlagEnum.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/FlagEnum.h"
 #include "DeviceObject.h"
 
 DILIGENT_BEGIN_NAMESPACE(Diligent)
@@ -187,7 +187,7 @@ typedef struct TextureViewDesc TextureViewDesc;
 // clang-format on
 
 #define DILIGENT_INTERFACE_NAME ITextureView
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define ITextureViewInclusiveMethods \
     IDeviceObjectInclusiveMethods;   \
@@ -229,7 +229,7 @@ DILIGENT_BEGIN_INTERFACE(ITextureView, IDeviceObject)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

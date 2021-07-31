@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_SamplerVk =
     {0x87c21e88, 0x8a9f, 0x4ad2, {0x9a, 0x1e, 0xd5, 0xec, 0x14, 0x4, 0x15, 0xea}};
 
 #define DILIGENT_INTERFACE_NAME ISamplerVk
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define ISamplerVkInclusiveMethods \
     ISamplerInclusiveMethods;      \
@@ -53,7 +53,7 @@ DILIGENT_BEGIN_INTERFACE(ISamplerVk, ISampler)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

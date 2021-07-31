@@ -40,7 +40,7 @@ static const INTERFACE_ID IID_ShaderBindingTableD3D12 =
     {0xdca2fad9, 0x2c41, 0x4419, {0x9d, 0x16, 0x79, 0x73, 0x1c, 0xe, 0xd9, 0xd8}};
 
 #define DILIGENT_INTERFACE_NAME IShaderBindingTableD3D12
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IShaderBindingTableD3D12InclusiveMethods \
     IShaderBindingTableInclusiveMethods;         \
@@ -59,7 +59,7 @@ DILIGENT_BEGIN_INTERFACE(IShaderBindingTableD3D12, IShaderBindingTable)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

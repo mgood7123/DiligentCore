@@ -32,7 +32,7 @@
 
 #define DILIGENT_API_VERSION 250003
 
-#include "../../../Primitives/interface/BasicTypes.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/BasicTypes.h"
 
 DILIGENT_BEGIN_NAMESPACE(Diligent)
 

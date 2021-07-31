@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_BufferViewD3D12 =
     {0x9643f2f, 0x40d4, 0x4076, {0xb0, 0x86, 0x9e, 0x5c, 0xdc, 0x2c, 0xc4, 0xfc}};
 
 #define DILIGENT_INTERFACE_NAME IBufferViewD3D12
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IBufferViewD3D12InclusiveMethods \
     IBufferViewInclusiveMethods;         \
@@ -53,7 +53,7 @@ DILIGENT_BEGIN_INTERFACE(IBufferViewD3D12, IBufferView)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

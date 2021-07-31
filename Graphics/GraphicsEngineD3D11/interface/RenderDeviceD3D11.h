@@ -39,7 +39,7 @@ static const struct INTERFACE_ID IID_RenderDeviceD3D11 =
     {0x5b1cbb8, 0xfcad, 0x49ee, {0xba, 0xda, 0x78, 0x1, 0x22, 0x3e, 0xc3, 0xfe}};
 
 #define DILIGENT_INTERFACE_NAME IRenderDeviceD3D11
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 #define IRenderDeviceD3D11InclusiveMethods \
     IRenderDeviceInclusiveMethods;         \
@@ -115,7 +115,7 @@ DILIGENT_BEGIN_INTERFACE(IRenderDeviceD3D11, IRenderDevice)
 };
 DILIGENT_END_INTERFACE
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 

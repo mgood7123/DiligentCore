@@ -27,9 +27,9 @@
 
 #pragma once
 
-#include "../../Primitives/interface/Errors.hpp"
-#include "../../Platforms/Basic/interface/DebugUtilities.hpp"
-#include "../../Platforms/interface/FileSystem.hpp"
+#include "../../../../MultiTouch/DiligentLog/Primitives/interface/Errors.hpp"
+#include "../../../../MultiTouch/DiligentLog/Platforms/Basic/interface/DebugUtilities.hpp"
+#include "../../../../MultiTouch/DiligentLog/Platforms/interface/FileSystem.hpp"
 
 namespace Diligent
 {

@@ -39,7 +39,7 @@ static const INTERFACE_ID IID_ShaderD3D12 =
     {0xc059b160, 0x7f31, 0x4029, {0x94, 0x3d, 0x9, 0x96, 0xb9, 0x8e, 0xe7, 0x9a}};
 
 #define DILIGENT_INTERFACE_NAME IShaderD3D12
-#include "../../../Primitives/interface/DefineInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/DefineInterfaceHelperMacros.h"
 
 // clang-format off
 #define IShaderD3D12InclusiveMethods \
@@ -61,7 +61,7 @@ DILIGENT_END_INTERFACE
 
 #endif
 
-#include "../../../Primitives/interface/UndefInterfaceHelperMacros.h"
+#include "../../../../../MultiTouch/DiligentLog/Primitives/interface/UndefInterfaceHelperMacros.h"
 
 #if DILIGENT_C_INTERFACE
 
